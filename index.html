@@ -4,13 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./assets/fonts/webfontkit-20191021-171821/stylesheet.css">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Gulp Starter</title>
+    <title>Imitation Instanews - NYT News Reader</title>
 </head>
 <body>
-    <div>gulp starter</div>
+    <header>
+        <img class="nyt-logo" src="./assets/images/nyt-logo.svg" alt="New York Times logo">
+        <form class="category-selection">
+            <div class="section-prompt">Choose a section:</div>
+            <select class="dropdown-button">
+                <option class="menu-item">
+                    <a href="#" class="sections">Sections ...</a>
+                </option>
+                <option class="menu-item">
+                    <a href="#" class="home">Home</a>
+                </option>
+                <option class="menu-item">
+                    <a href="#" class="arts">Arts</a>
+                </option>
+                <option class="menu-item">
+                    <a href="#" class="business">Business</a>
+                </option>
+                <option class="menu-item">
+                    <a href="#" class="sports">Sports</a>
+                </option>
+                <option class="menu-item">
+                    <a href="#" class="technology">Technology</a>
+                </option>
+                <option class="menu-item">
+                    <a href="#" class="fashion">Fashion</a>
+                </option>
+            </select>
+        </form>
+    </header>
     
+    <section class="news-span">
+
+    </section>
+    <footer class="footer">
+        <div class="copyright">© Copyright 2019 INSTANEWS</div>
+    </footer>
     
-    <script src="./build/js/script.min.js"></script>
+        
+    <script src="./js/script.js"></script>
 </body>
 </html>
