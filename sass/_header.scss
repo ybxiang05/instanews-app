@@ -1,0 +1,29 @@
+.nyt-logo {
+    display: flex;
+    margin: 105px auto 0px auto;
+    /* transition: .5s; */
+}
+
+.category-selection {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 18px auto 110px auto;
+}
+.section-prompt {
+    font-size: 0.8rem;
+    margin: 0 auto;
+}
+.dropdown-button{
+    background-color: white;
+    color: black;
+    margin: 15px auto;
+    font-size: 1.1rem;
+}
+
+.dropdown-button:focus{
+    outline: none;
+}
+
+.dropdown-menu{}
+
+.menu-item{}

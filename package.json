@@ -25,4 +25,7 @@
     "gulp-terser": "^1.2.0",
     "gulp-prettyerror": "^1.2.1"
   },
+  "dependencies": {
+    "lodash.update": "^4.10.2"
+  }
 }
