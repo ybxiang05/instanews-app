@@ -1,28 +1,67 @@
-.nyt-logo {
-    display: flex;
-    margin: 105px auto 0px auto;
-    /* transition: .5s; */
+header {
+    @include tablet {
+        display: flex;
+        flex-direction: row;
+    };
+    .nyt-logo {
+        display: flex;
+        margin: 105px auto 0px auto;
+        transition: .5s;
+        @include tablet {
+            margin: 160px 0;
+            margin-left: 22%;
+            padding-right: 15px;
+            width: 23vw;
+            max-width: 220px;
+        };
+        @include desktop {
+            margin: 150px 10px 30px 30px;
+            padding-right: 5%;
+            width: 220px;
+            height: 220px;
+        }
+    }
+    .category-selection {
+        display: flex;
+        flex-flow: column nowrap;
+        margin: 18px auto 110px auto;
+        @include tablet {
+            margin: 230px 0;
+        };
+        @include desktop {
+            margin: 225px 0 50px 0; 
+            text-align: left;   
+        }
+        .section-prompt {
+            font-size: 0.8rem;
+            margin: 0 auto;
+            @include tablet {
+                font-size: 0.9rem;
+            };
+            @include desktop {
+                font-size: 1rem;
+                margin: 0 auto;
+            }
+        }
+        .dropdown-button{
+            &:focus {
+                outline: none;
+            }
+            background-color: white;
+            color: black;
+            margin: 15px auto;
+            font-size: 1.1rem;
+            @include desktop {
+                margin: 0 auto;
+            }
+        }
+        
+    }
 }
 
-.category-selection {
-    display: flex;
-    flex-flow: column nowrap;
-    margin: 18px auto 110px auto;
-}
-.section-prompt {
-    font-size: 0.8rem;
-    margin: 0 auto;
-}
-.dropdown-button{
-    background-color: white;
-    color: black;
-    margin: 15px auto;
-    font-size: 1.1rem;
-}
 
-.dropdown-button:focus{
-    outline: none;
-}
+
+
 
 .dropdown-menu{}
 
