@@ -1,8 +1,8 @@
 .news-span {
   display: flex;
   flex-flow: row wrap;
-  /* margin: 0px; */
   width: 100%;
+  // transition: 2s;
   .bg-img {
     height: 420px;
     align-content: flex-end;
@@ -13,6 +13,7 @@
     color: $color;
     display: flex;
     flex-flow: row wrap;
+    transition: 2s;
     @include desktop {
       flex-basis: 25%;
     }
@@ -25,18 +26,27 @@
       line-height: 1.5rem;
       font-weight: bold;
       display: flex;
-      align-content: flex-end;
+      align-items: flex-end;
+      height: 60px;
+      width: 100%;
     }
     .article-abstract {
       display: none;
+      transition: 3s;
+      // position: aboslute;
+      // opacity: 0;
+      // bottom: 0;
     }
     &:hover {
       .article-abstract {
-        display: block;
+        // display: inline-block;
+        opacity: 1;
         @extend .article-title;
         font-weight: normal;
         font-size: 0.8rem;
         line-height: 1rem;
+        transition: 2s;
+        align-items: flex-start;
       }
     }
   }
