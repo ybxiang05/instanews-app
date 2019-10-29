@@ -185,35 +185,39 @@ body {
             flex-flow: row wrap;
     -webkit-transition: 2s;
     transition: 2s;
+    overflow: hidden;
     align-content: flex-end; }
     @media (min-width: 1000px) {
       .news-span .bg-img {
         flex-basis: 25%; } }
-    .news-span .bg-img .article-title, .news-span .bg-img:hover .article-abstract {
+    .news-span .bg-img .article-text {
+      -webkit-transform: translateY(50%);
+              transform: translateY(50%);
+      -webkit-transition: 0.5s linear;
+      transition: 0.5s linear;
+      padding-right: 5px;
       background-color: rgba(0, 0, 0, 0.5);
-      background-size: cover;
-      padding: 10px 5px;
-      line-height: 1.5rem;
-      font-weight: bold;
-      display: -webkit-box;
-      display: flex;
-      -webkit-box-align: end;
-              align-items: flex-end;
-      height: 60px;
-      width: 100%; }
-    .news-span .bg-img .article-abstract {
-      display: none;
-      -webkit-transition: 3s;
-      transition: 3s; }
-    .news-span .bg-img:hover .article-abstract {
-      opacity: 1;
-      font-weight: normal;
-      font-size: 0.8rem;
-      line-height: 1rem;
-      -webkit-transition: 2s;
-      transition: 2s;
-      -webkit-box-align: start;
-              align-items: flex-start; }
+      background-size: cover; }
+      .news-span .bg-img .article-text:hover {
+        -webkit-transform: translateY(0);
+                transform: translateY(0); }
+      .news-span .bg-img .article-text .article-title {
+        padding: 10px;
+        line-height: 1.5rem;
+        font-weight: bold;
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-align: start;
+                align-items: flex-start;
+        height: 60px;
+        width: 100%; }
+      .news-span .bg-img .article-text:hover .article-abstract {
+        padding: 10px 5px;
+        font-weight: normal;
+        font-size: 0.8rem;
+        line-height: 1rem;
+        -webkit-box-align: start;
+                align-items: flex-start; }
 
 .footer {
   font-size: 0.9rem;

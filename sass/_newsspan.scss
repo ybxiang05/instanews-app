@@ -14,39 +14,40 @@
     display: flex;
     flex-flow: row wrap;
     transition: 2s;
+    overflow: hidden;
     @include desktop {
       flex-basis: 25%;
     }
     align-content: flex-end;
-
-    .article-title {
+    .article-text {
+      transform: translateY(50%);
+      transition: 0.5s linear;
+      padding-right: 5px;
       background-color: rgba(0, 0, 0, 0.5);
       background-size: cover;
-      padding: 10px 5px;
-      line-height: 1.5rem;
-      font-weight: bold;
-      display: flex;
-      align-items: flex-end;
-      height: 60px;
-      width: 100%;
-    }
-    .article-abstract {
-      display: none;
-      transition: 3s;
-      // position: aboslute;
-      // opacity: 0;
-      // bottom: 0;
-    }
-    &:hover {
-      .article-abstract {
-        // display: inline-block;
-        opacity: 1;
-        @extend .article-title;
-        font-weight: normal;
-        font-size: 0.8rem;
-        line-height: 1rem;
-        transition: 2s;
+
+      &:hover {
+        transform: translateY(0);
+      }
+      .article-title {
+        padding: 10px;
+        line-height: 1.5rem;
+        font-weight: bold;
+        display: flex;
         align-items: flex-start;
+        height: 60px;
+        width: 100%;
+      }
+      &:hover {
+        .article-abstract {
+          // background-color: rgba(0, 0, 0, 0.5);
+          // background-size: cover;
+          padding: 10px 5px;
+          font-weight: normal;
+          font-size: 0.8rem;
+          line-height: 1rem;
+          align-items: flex-start;
+        }
       }
     }
   }
