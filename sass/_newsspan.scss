@@ -18,24 +18,21 @@
     }
     align-content: flex-end;
 
-    .article-text {
+    .article-title {
       background-color: rgba(0, 0, 0, 0.5);
       background-size: cover;
       padding: 10px 5px;
       display: flex;
       align-content: flex-end;
-      // figure out position aboslute
+      bottom: 0;
     }
-    //   .article-abstract {
-    //     height: 0;
-    //     padding: 30px;
-    //     &:hover {
-    //       height: 50px;
-    //     }
-    //   }
+    .article-abstract {
+      visibility: hidden;
+    }
+    &:hover {
+      .article-abstract {
+        visibility: visible;
+      }
+    }
   }
 }
-
-// .show{
-//     display: inline-block;
-// }

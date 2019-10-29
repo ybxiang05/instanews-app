@@ -16,7 +16,7 @@
     }
 
     @include tablet {
-      margin: 150px 0 0 20%;
+      margin: 0 0 0 20%;
       padding-right: 15px;
       width: 23vw;
       max-width: 220px;
@@ -40,7 +40,7 @@
     margin: 0 auto;
     align-content: center;
     @include tablet {
-      margin: 230px 0;
+      margin: 200px 0;
       &.change {
         margin: 0 0 0 20px;
       }

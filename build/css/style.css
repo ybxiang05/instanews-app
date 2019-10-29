@@ -106,7 +106,7 @@ body {
       margin: 0 auto 10px; }
     @media (min-width: 600px) {
       .header .nyt-logo {
-        margin: 150px 0 0 20%;
+        margin: 0 0 0 20%;
         padding-right: 15px;
         width: 23vw;
         max-width: 220px; }
@@ -127,7 +127,7 @@ body {
     align-content: center; }
     @media (min-width: 600px) {
       .header .category-selection {
-        margin: 230px 0; }
+        margin: 200px 0; }
         .header .category-selection.change {
           margin: 0 0 0 20px; } }
     @media (min-width: 1000px) {
@@ -179,13 +179,18 @@ body {
     @media (min-width: 1000px) {
       .news-span .bg-img {
         flex-basis: 25%; } }
-    .news-span .bg-img .article-text {
+    .news-span .bg-img .article-title {
       background-color: rgba(0, 0, 0, 0.5);
       background-size: cover;
       padding: 10px 5px;
       display: -webkit-box;
       display: flex;
-      align-content: flex-end; }
+      align-content: flex-end;
+      bottom: 0; }
+    .news-span .bg-img .article-abstract {
+      visibility: hidden; }
+    .news-span .bg-img:hover .article-abstract {
+      visibility: visible; }
 
 .footer {
   font-size: 0.9rem;
@@ -194,11 +199,13 @@ body {
   margin: 0 auto;
   -webkit-box-pack: center;
           justify-content: center;
-  color: #c2c2c2; }
+  color: #c2c2c2;
+  padding: 2rem; }
   @media (min-width: 1000px) {
     .footer {
       display: inline-block;
       margin: 20px 35px;
-      text-align: left; } }
+      text-align: left;
+      padding: 1rem; } }
   .footer .copyright span {
     text-transform: uppercase; }
