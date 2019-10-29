@@ -22,16 +22,21 @@
       background-color: rgba(0, 0, 0, 0.5);
       background-size: cover;
       padding: 10px 5px;
+      line-height: 1.5rem;
+      font-weight: bold;
       display: flex;
       align-content: flex-end;
-      bottom: 0;
     }
     .article-abstract {
-      visibility: hidden;
+      display: none;
     }
     &:hover {
       .article-abstract {
-        visibility: visible;
+        display: block;
+        @extend .article-title;
+        font-weight: normal;
+        font-size: 0.8rem;
+        line-height: 1rem;
       }
     }
   }

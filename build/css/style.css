@@ -121,7 +121,9 @@ body {
         height: 220px; }
         .header .nyt-logo.change {
           width: 65px;
-          margin: 0; } }
+          margin: 0;
+          -webkit-transition: 0.5s;
+          transition: 0.5s; } }
   .header .category-selection {
     margin: 0 auto;
     align-content: center; }
@@ -179,18 +181,22 @@ body {
     @media (min-width: 1000px) {
       .news-span .bg-img {
         flex-basis: 25%; } }
-    .news-span .bg-img .article-title {
+    .news-span .bg-img .article-title, .news-span .bg-img:hover .article-abstract {
       background-color: rgba(0, 0, 0, 0.5);
       background-size: cover;
       padding: 10px 5px;
+      line-height: 1.5rem;
+      font-weight: bold;
       display: -webkit-box;
       display: flex;
-      align-content: flex-end;
-      bottom: 0; }
+      align-content: flex-end; }
     .news-span .bg-img .article-abstract {
-      visibility: hidden; }
+      display: none; }
     .news-span .bg-img:hover .article-abstract {
-      visibility: visible; }
+      display: block;
+      font-weight: normal;
+      font-size: 0.8rem;
+      line-height: 1rem; }
 
 .footer {
   font-size: 0.9rem;
