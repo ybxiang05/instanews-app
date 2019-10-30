@@ -41,7 +41,7 @@
     margin: 0 auto;
     align-content: center;
     @include tablet {
-      margin: 200px 0;
+      margin: 200px 0 170px;
       &.change {
         margin: 0 0 0 20px;
       }

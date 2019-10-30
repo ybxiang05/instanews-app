@@ -129,7 +129,7 @@ body {
     align-content: center; }
     @media (min-width: 600px) {
       .header .category-selection {
-        margin: 200px 0; }
+        margin: 200px 0 170px; }
         .header .category-selection.change {
           margin: 0 0 0 20px; } }
     @media (min-width: 1000px) {
@@ -175,7 +175,7 @@ body {
     align-content: flex-end;
     background-size: cover;
     background-position: center;
-    flex-basis: 50%;
+    flex-basis: 100%;
     text-decoration: none;
     color: #ffffff;
     display: -webkit-box;
@@ -183,21 +183,25 @@ body {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
             flex-flow: row wrap;
-    -webkit-transition: 2s;
-    transition: 2s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
     overflow: hidden;
     align-content: flex-end; }
+    @media (min-width: 600px) {
+      .news-span .bg-img {
+        flex-basis: 50%; } }
     @media (min-width: 1000px) {
       .news-span .bg-img {
         flex-basis: 25%; } }
     .news-span .bg-img .article-text {
-      -webkit-transform: translateY(50%);
-              transform: translateY(50%);
+      -webkit-transform: translateY(45%);
+              transform: translateY(45%);
       -webkit-transition: 0.5s linear;
       transition: 0.5s linear;
       padding-right: 5px;
       background-color: rgba(0, 0, 0, 0.5);
-      background-size: cover; }
+      background-size: cover;
+      width: 100%; }
       .news-span .bg-img .article-text:hover {
         -webkit-transform: translateY(0);
                 transform: translateY(0); }
@@ -207,17 +211,16 @@ body {
         font-weight: bold;
         display: -webkit-box;
         display: flex;
-        -webkit-box-align: start;
-                align-items: flex-start;
-        height: 60px;
-        width: 100%; }
-      .news-span .bg-img .article-text:hover .article-abstract {
-        padding: 10px 5px;
-        font-weight: normal;
-        font-size: 0.8rem;
-        line-height: 1rem;
-        -webkit-box-align: start;
-                align-items: flex-start; }
+        -webkit-box-align: center;
+                align-items: center;
+        height: 60px; }
+  .news-span:hover .article-abstract {
+    padding: 10px 5px;
+    font-weight: normal;
+    font-size: 0.8rem;
+    line-height: 1rem;
+    -webkit-box-align: start;
+            align-items: flex-start; }
 
 .footer {
   font-size: 0.9rem;

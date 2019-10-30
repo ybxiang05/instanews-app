@@ -8,23 +8,28 @@
     align-content: flex-end;
     background-size: cover;
     background-position: center;
-    flex-basis: 50%;
+    flex-basis: 100%;
     text-decoration: none;
     color: $color;
     display: flex;
     flex-flow: row wrap;
-    transition: 2s;
+    transition: 0.5s;
     overflow: hidden;
+    align-content: flex-end;
+    @include tablet {
+      flex-basis: 50%;
+    }
     @include desktop {
       flex-basis: 25%;
     }
-    align-content: flex-end;
+
     .article-text {
-      transform: translateY(50%);
+      transform: translateY(45%);
       transition: 0.5s linear;
       padding-right: 5px;
       background-color: rgba(0, 0, 0, 0.5);
       background-size: cover;
+      width: 100%;
 
       &:hover {
         transform: translateY(0);
@@ -34,21 +39,20 @@
         line-height: 1.5rem;
         font-weight: bold;
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         height: 60px;
-        width: 100%;
       }
-      &:hover {
-        .article-abstract {
-          // background-color: rgba(0, 0, 0, 0.5);
-          // background-size: cover;
-          padding: 10px 5px;
-          font-weight: normal;
-          font-size: 0.8rem;
-          line-height: 1rem;
-          align-items: flex-start;
-        }
-      }
+    }
+  }
+  &:hover {
+    .article-abstract {
+      // background-color: rgba(0, 0, 0, 0.5);
+      // background-size: cover;
+      padding: 10px 5px;
+      font-weight: normal;
+      font-size: 0.8rem;
+      line-height: 1rem;
+      align-items: flex-start;
     }
   }
 }

@@ -9,6 +9,7 @@
 //append to dom
 //***** - deferred .always remove loader.gif
 //***** add .fail(function)
+//***** add alt tag for article images
 
 $(function() {
   $(".dropdown-button").on("change", function() {
@@ -45,10 +46,16 @@ $(function() {
         const slicedArticles = filteredImages.slice(0, 12);
         console.log(slicedArticles);
         $.each(slicedArticles, function(key, value) {
-          const str = `<a class='bg-img' style='background-image: url(${value.multimedia[4].url})' href ='${value.url}'>
+          const shortAbstract =
+            $.trim(value.abstract)
+              .substring(0, 275)
+              .split(" ")
+              .slice(0, -1)
+              .join(" ") + `...`;
+          const str = `<a class='bg-img' style='background-image: url(${value.multimedia[4].url})' role ='img' aria-label='${value.title} ${value.abstract}' href ='${value.url}' target='_blank'>
         <div class='article-text'>
-          <h3 class='article-title'>${value.title}</h3>
-          <p class='article-abstract'>${value.abstract}</p>
+          <h1 class='article-title' role='heading' aria-label='${value.title}' >${value.title}</h1>
+          <p class='article-abstract'>${shortAbstract}</p>
         </div>
       </a>`;
           $(".news-span").append(str);
