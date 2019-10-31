@@ -9,7 +9,7 @@
 //append to dom
 //***** - deferred .always remove loader.gif
 //***** add .fail(function)
-//***** add alt tag for article images
+//add alt tag for article images
 
 $(function() {
   $(".dropdown-button").on("change", function() {
@@ -43,25 +43,31 @@ $(function() {
             return true;
           }
         });
+
         const slicedArticles = filteredImages.slice(0, 12);
         console.log(slicedArticles);
         $.each(slicedArticles, function(key, value) {
-          const shortAbstract =
-            $.trim(value.abstract)
-              .substring(0, 275)
-              .split(" ")
-              .slice(0, -1)
-              .join(" ") + `...`;
-          const str = `<a class='bg-img' style='background-image: url(${value.multimedia[4].url})' role ='img' aria-label='${value.title} ${value.abstract}' href ='${value.url}' target='_blank'>
+          // const shortAbstract =
+          // $.trim(value.abstract)
+          //   .substring(0, 275)
+          //   .split(" ")
+          //   .slice(0, -1)
+          //   .join(" ") + `...`;
+          //change value in <p>
+
+          const str = `<a class='bg-img' style='background-image: url(${value.multimedia[4].url})' role ='img' aria-label='${value.multimedia[4].caption} ${value.title} ${value.abstract}' href ='${value.url}' target='_blank'>
         <div class='article-text'>
           <h1 class='article-title' role='heading' aria-label='${value.title}' >${value.title}</h1>
-          <p class='article-abstract'>${shortAbstract}</p>
+          <p class='article-abstract'>${value.abstract}</p>
         </div>
       </a>`;
           $(".news-span").append(str);
         });
       })
       .fail(function() {
+        $(".news-span").append(
+          "It appears late-stage capitalism broke the internet again. Please refresh the page, or try again later."
+        );
         console.log("something went wrong");
       }); // end of .ajax
   }
