@@ -2,7 +2,6 @@
   display: flex;
   flex-flow: row wrap;
   width: 100%;
-  // transition: 2s;
   .bg-img {
     height: 420px;
     align-content: flex-end;
@@ -13,7 +12,6 @@
     color: $color;
     display: flex;
     flex-flow: row wrap;
-    transition: 0.5s;
     overflow: hidden;
     align-content: flex-end;
     @include tablet {
@@ -25,7 +23,7 @@
 
     .article-text {
       transform: translateY(75px);
-      transition: 0.5s linear;
+      transition: 0.35s linear;
       padding-right: 5px;
       background-color: rgba(0, 0, 0, 0.5);
       background-size: cover;

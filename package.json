@@ -26,7 +26,8 @@
     "gulp-prettyerror": "^1.2.1"
   },
   "dependencies": {
+    "lodash.template": "4.5.0",
     "lodash.update": "^4.10.2",
-    "lodash.template": "4.5.0"
+    "selectric": "^1.13.0"
   }
 }

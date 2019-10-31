@@ -1,56 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./build/css/style.min.css">
-    <title>Imitation Instanews - NYT News Reader</title>
-</head>
-<body>
-    <header class="header">
-        <img class="nyt-logo" src="./assets/images/nyt-logo.svg" alt="New York Times logo">
-        <form class="category-selection">
-            <div class="section-prompt">Choose a section:</div>
-            <select class="dropdown-button">
-                <option class="menu-item" value="sections">
-                    <a href="#" class="sections">Sections ...</a>
-                </option>
-                <option class="menu-item home" value="home">
-                    <a href="#" class="home"></a>Home</a>
-                </option>
-                <option class="menu-item" value="arts">
-                    <a href="#" class="arts">Arts</a>
-                </option>
-                <option class="menu-item" value="business">
-                    <a href="#" class="business">Business</a>
-                </option>
-                <option class="menu-item" value="sports">
-                    <a href="#" class="sports">Sports</a>
-                </option>
-                <option class="menu-item" value="technology">
-                    <a href="#" class="technology">Technology</a>
-                </option>
-                <option class="menu-item" value="fashion">
-                    <a href="#" class="fashion">Fashion</a>
-                </option>
-            </select>
-        </form>
-    </header>
-    
-    <section class="news-span">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    </section>
+    <link rel="stylesheet" href="./css/selectric.css" />
+    <link rel="stylesheet" href="./build/css/style.min.css" />
+    <title>Imitation Instanews - NYT News Reader</title>
+  </head>
+  <body>
+    <header class="header">
+      <img
+        class="nyt-logo"
+        src="./assets/images/nyt-logo.svg"
+        alt="New York Times logo"
+      />
+      <div class="category-selection">
+        <div class="section-prompt">Choose a section:</div>
+        <select role="navigation" class="dropdown-button">
+          <option class="menu-item" value="sections">Sections ...</option>
+          <option class="menu-item home" value="home">Home</option>
+          <option class="menu-item" value="arts">Arts</option>
+          <option class="menu-item" value="business">Business</option>
+          <option class="menu-item" value="sports">Sports</option>
+          <option class="menu-item" value="technology">Technology</option>
+          <option class="menu-item" value="fashion">Fashion</option>
+        </select>
+      </div>
+    </header>
+
+    <section class="news-span"></section>
     <footer class="footer">
-        <div class="copyright">© Copyright 2019 
-            <span>Instanews</span>
-        </div>
+      <div class="copyright">
+        © Copyright 2019
+        <span>Instanews</span>
+      </div>
     </footer>
-    
+
     <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/selectric@1.13.0/public/jquery.selectric.min.js"></script>
     <script src="./js/script.js"></script>
-</body>
+  </body>
 </html>

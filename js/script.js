@@ -11,6 +11,8 @@
 //***** add .fail(function)
 //add alt tag for article images
 
+$("select").selectric();
+
 $(function() {
   $(".dropdown-button").on("change", function() {
     $(".header").append(
@@ -34,7 +36,6 @@ $(function() {
       dataType: "json"
     })
       .done(function(data) {
-        $("header .loader-gif").remove();
         $(".nyt-logo").addClass("change");
         $(".category-selection").addClass("change");
         $(".news-span").empty();
@@ -69,6 +70,9 @@ $(function() {
           "It appears late-stage capitalism broke the internet again. Please refresh the page, or try again later."
         );
         console.log("something went wrong");
+      })
+      .always(function() {
+        $("header .loader-gif").remove();
       }); // end of .ajax
   }
 }); // end of doc ready

@@ -2,8 +2,6 @@
   display: flex;
   flex-flow: column nowrap;
   padding: 2rem;
-  transition: 1.5s;
-
   @include tablet {
     display: flex;
     flex-direction: row;
@@ -14,6 +12,7 @@
     &.change {
       width: 150px;
       margin: 0 auto 10px;
+      transition: 0.25s;
     }
 
     @include tablet {
@@ -52,6 +51,7 @@
     }
     .section-prompt {
       font-size: 0.8rem;
+      margin-bottom: 10px;
 
       @include tablet {
         font-size: 0.9rem;
