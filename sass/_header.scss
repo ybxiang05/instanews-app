@@ -7,12 +7,11 @@
     flex-direction: row;
   }
   .nyt-logo {
-    margin: 105px auto 20px;
+    margin: 85px auto 20px;
     transition: 0.5s;
     &.change {
       width: 150px;
       margin: 0 auto 10px;
-      transition: 0.25s;
     }
 
     @include tablet {

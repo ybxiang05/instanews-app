@@ -98,14 +98,12 @@ body {
       -webkit-box-direction: normal;
               flex-direction: row; } }
   .header .nyt-logo {
-    margin: 105px auto 20px;
+    margin: 85px auto 20px;
     -webkit-transition: 0.5s;
     transition: 0.5s; }
     .header .nyt-logo.change {
       width: 150px;
-      margin: 0 auto 10px;
-      -webkit-transition: 0.25s;
-      transition: 0.25s; }
+      margin: 0 auto 10px; }
     @media (min-width: 600px) {
       .header .nyt-logo {
         margin: 0 0 0 20%;
@@ -164,6 +162,9 @@ body {
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%); }
 
+/*======================================
+  Selectric
+======================================*/
 .selectric-wrapper {
   position: relative;
   cursor: pointer; }
@@ -172,20 +173,21 @@ body {
   width: 100%; }
 
 .selectric {
-  background: #fff;
+  border: 2px solid #ffffff;
+  background: #ffffff;
   position: relative;
-  border-radius: 5px;
-  width: 200px; }
+  border-radius: 5px; }
 
 .selectric .label {
   display: block;
   white-space: nowrap;
-  margin: 0 48px 0 16px;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 48px;
-  color: #000;
-  height: 48px; }
+  margin: 0 44px 0 11px;
+  font-size: 1rem;
+  font-weight: 900;
+  width: 120px;
+  line-height: 40px;
+  color: #000000;
+  height: 40px; }
 
 .selectric .button {
   background: #000000;
@@ -196,23 +198,35 @@ body {
   top: 0;
   bottom: 0;
   margin: auto;
-  width: 48px;
-  height: 48px;
-  color: #000;
-  text-align: center; }
+  width: 42px;
+  height: 40px;
+  color: #ffffff;
+  text-align: center;
+  font: 0/0 a;
+  *font: 42px/42px Lucida Sans Unicode, Arial Unicode MS, Arial; }
+
+.selectric .button:after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border: 4px solid transparent;
+  border-top-color: #ffffff;
+  border-bottom: none; }
+
+.selectric-hover .selectric .button:after {
+  border-top-color: #fff; }
 
 .selectric-open {
   z-index: 9999; }
 
-.selectric-open .selectric {
-  border-radius: 5px 5px 0 0;
-  background: #fff; }
-
 .selectric-open .selectric-items {
-  display: block;
-  border-radius: 0 0 10px 10px;
-  overflow: hidden;
-  border-top: 5px solid white; }
+  display: block; }
 
 .selectric-disabled {
   filter: alpha(opacity=50);
@@ -273,13 +287,15 @@ body {
 
 /* Items box */
 .selectric-items {
+  display: none;
   position: absolute;
   top: 100%;
   left: 0;
   background: #fff;
   border: none;
   z-index: -1;
-  box-shadow: 0 0 10px -6px; }
+  box-shadow: 0 0 10px -6px;
+  border-radius: 5px; }
 
 .selectric-items .selectric-scroll {
   height: 100%;
@@ -295,27 +311,28 @@ body {
   padding: 0;
   margin: 0;
   font-size: 1rem;
-  line-height: 20px;
-  min-height: 20px; }
+  line-height: 1rem; }
 
 .selectric-items li {
   display: block;
   padding: 8px;
   color: #000;
-  background-color: #fff;
+  font-weight: 700;
   cursor: pointer; }
 
 .selectric-items li.selected {
-  background: #efefef;
-  color: #444; }
+  background: #fff;
+  color: #000; }
 
 .selectric-items li.highlighted {
   background: #000;
   color: #fff; }
 
 .selectric-items li:hover {
-  background: #f0f0f0;
-  color: #444; }
+  background: #fff;
+  color: #000;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000; }
 
 .selectric-items .disabled {
   filter: alpha(opacity=50);
@@ -355,8 +372,7 @@ body {
   width: 100%; }
   .news-span .bg-img {
     height: 420px;
-    align-content: flex-end;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     flex-basis: 100%;
     text-decoration: none;
@@ -370,7 +386,8 @@ body {
     align-content: flex-end; }
     @media (min-width: 600px) {
       .news-span .bg-img {
-        flex-basis: 50%; } }
+        flex-basis: 50%;
+        background-size: cover; } }
     @media (min-width: 1000px) {
       .news-span .bg-img {
         flex-basis: 25%; } }
@@ -383,6 +400,9 @@ body {
       background-color: rgba(0, 0, 0, 0.5);
       background-size: cover;
       width: 100%; }
+      .news-span .bg-img .article-text.hover .article-text {
+        -webkit-transform: translateY(0);
+                transform: translateY(0); }
       .news-span .bg-img .article-text .article-title {
         padding: 10px;
         line-height: 1.5rem;
@@ -400,9 +420,10 @@ body {
         line-height: 1rem;
         -webkit-box-align: start;
                 align-items: flex-start; }
-    .news-span .bg-img:hover .article-text {
+    .news-span .bg-img:focus .article-text, .news-span .bg-img:hover .article-text {
       -webkit-transform: translateY(0);
-              transform: translateY(0); }
+              transform: translateY(0);
+      border: 2px solid white; }
 
 .footer {
   font-size: 0.9rem;

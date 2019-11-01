@@ -17,8 +17,13 @@
         alt="New York Times logo"
       />
       <div class="category-selection">
-        <div class="section-prompt">Choose a section:</div>
-        <select role="navigation" class="dropdown-button">
+        <div class="section-prompt" for="news-category">Choose a section:</div>
+        <select
+          role="navigation"
+          class="dropdown-button"
+          id="news-category"
+          name="news-category"
+        >
           <option class="menu-item" value="sections">Sections ...</option>
           <option class="menu-item home" value="home">Home</option>
           <option class="menu-item" value="arts">Arts</option>
@@ -30,7 +35,7 @@
       </div>
     </header>
 
-    <section class="news-span"></section>
+    <div class="news-span"></div>
     <footer class="footer">
       <div class="copyright">
         © Copyright 2019
