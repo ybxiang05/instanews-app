@@ -372,8 +372,9 @@ body {
   width: 100%; }
   .news-span .bg-img {
     height: 420px;
-    background-size: contain;
-    background-position: center;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
     flex-basis: 100%;
     text-decoration: none;
     color: #ffffff;
