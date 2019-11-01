@@ -1,16 +1,3 @@
-//
-//put in loader.gif
-//get value from selector
-//take and make lowercase
-//if statement for if selections is chosen, if so, do not run ajax
-//make sure all articles have images
-//we only want 12 articles
-// go through each object and get info for each article
-//append to dom
-//***** - deferred .always remove loader.gif
-//***** add .fail(function)
-//add alt tag for article images
-
 $("select").selectric();
 
 $(function() {
@@ -48,14 +35,6 @@ $(function() {
         const slicedArticles = filteredImages.slice(0, 12);
         console.log(slicedArticles);
         $.each(slicedArticles, function(key, value) {
-          // const shortAbstract =
-          // $.trim(value.abstract)
-          //   .substring(0, 275)
-          //   .split(" ")
-          //   .slice(0, -1)
-          //   .join(" ") + `...`;
-          //change value in <p>
-
           const str = `<a class='bg-img' style='background-image: url(${value.multimedia[4].url})' role ='img' aria-label='${value.multimedia[4].caption} ${value.title} ${value.abstract}' href ='${value.url}' target='_blank'>
         <div class='article-text'>
           <h1 class='article-title' role='heading' aria-label='${value.title}' >${value.title}</h1>
