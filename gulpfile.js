@@ -40,7 +40,6 @@ gulp.task(
 );
 
 gulp.task("say_hello", function(done) {
-  console.log("Hello!");
   done();
 });
 

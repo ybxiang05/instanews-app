@@ -64,8 +64,8 @@
       &:focus {
         outline: none;
       }
-      background-color: white;
-      color: black;
+      background-color: $background-color-menu;
+      color: $color-menu;
       margin: 15px auto;
       font-size: 1.1rem;
       @include desktop {
